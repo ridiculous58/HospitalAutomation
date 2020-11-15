@@ -10,15 +10,19 @@ import java.sql.SQLException;
 import java.sql.*;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
+import org.springframework.beans.factory.annotation.Value;
 
 public class HibernateEntityRepositoryBase<T extends IEntity>  implements IEntityRepository<T> {
 
+    /*@Value("${database.connectionString}")
+    private String connectionString;*/
+    
     private SessionFactory sessionFactory;
     private Session session;
     private Class<T> currentClass;
     public HibernateEntityRepositoryBase(Class<T> currentClass) {
         this.sessionFactory = new Configuration()
-                .configure("com/hospitalautomation/Infrastructure/hibernate.cfg.xml")
+                .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(currentClass)
                 .buildSessionFactory();
         this.currentClass = currentClass;
@@ -41,8 +45,18 @@ public class HibernateEntityRepositoryBase<T extends IEntity>  implements IEntit
     }
 
     @Override
-    public T get() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public T get(int id) {
+        session = sessionFactory.getCurrentSession();
+        T entity = null;
+        try{
+            session.beginTransaction();
+            entity = session.get(currentClass,id);
+            session.getTransaction().commit();
+        }
+        finally{
+            session.close();
+        }
+        return entity;
     }
 
     @Override
@@ -73,7 +87,15 @@ public class HibernateEntityRepositoryBase<T extends IEntity>  implements IEntit
 
     @Override
     public void delete(T entity) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         session = sessionFactory.getCurrentSession();
+        try{
+            session.beginTransaction();
+            session.delete(entity);
+            session.getTransaction().commit();
+        }
+        finally{
+            session.close();
+        }
     }
     
 }

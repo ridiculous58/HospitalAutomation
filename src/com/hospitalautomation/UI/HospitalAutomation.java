@@ -6,10 +6,12 @@
 package com.hospitalautomation.UI;
 
 import com.hospitalautomation.Business.ICityService;
-import com.hospitalautomation.Business.CityManager;
+import com.hospitalautomation.Business.*;
 import com.hospitalautomation.Entities.City;
 import com.hospitalautomation.DataAccess.HibernateCityDal;
 import java.util.List;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  *
@@ -22,7 +24,9 @@ public class HospitalAutomation {
      */
     public static void main(String[] args) {
         
-        ICityService cityService = new CityManager(new HibernateCityDal());
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(IocConfig.class);
+        
+        ICityService cityService = context.getBean("service",ICityService.class);
         
         List<City> cities = cityService.getList();
         for (City city :cities ) {
