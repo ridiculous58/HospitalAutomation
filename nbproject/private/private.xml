@@ -3,9 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Monster/Documents/NetBeansProjects/hospitalAutomation/src/hospitalautomation/Infrastructure/HibernateEntityRepositoryBase.java</file>
-            <file>file:/C:/Users/Monster/Documents/NetBeansProjects/hospitalAutomation/src/hospitalautomation/UI/HospitalAutomation.java</file>
-            <file>file:/C:/Users/Monster/Documents/NetBeansProjects/hospitalAutomation/src/hospitalautomation/Entities/City.java</file>
+            <file>file:/C:/Users/Monster/Documents/NetBeansProjects/com.hospitalAutomation/src/com/hospitalautomation/DataAccess/HibernateCityDal.java</file>
+            <file>file:/C:/Users/Monster/Documents/NetBeansProjects/com.hospitalAutomation/src/com/hospitalautomation/UI/HospitalAutomation.java</file>
+            <file>file:/C:/Users/Monster/Documents/NetBeansProjects/com.hospitalAutomation/src/com/hospitalautomation/Entities/City.java</file>
+            <file>file:/C:/Users/Monster/Documents/NetBeansProjects/com.hospitalAutomation/src/com/hospitalautomation/Infrastructure/hibernate.cfg.xml</file>
+            <file>file:/C:/Users/Monster/Documents/NetBeansProjects/com.hospitalAutomation/src/com/hospitalautomation/Infrastructure/HibernateEntityRepositoryBase.java</file>
         </group>
     </open-files>
 </project-private>
