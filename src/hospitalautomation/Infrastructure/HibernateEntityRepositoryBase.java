@@ -22,12 +22,13 @@ public class HibernateEntityRepositoryBase<T extends IEntity>  implements IEntit
                 .addAnnotatedClass(currentClass)
                 .buildSessionFactory();
         this.currentClass = currentClass;
-        session = sessionFactory.getCurrentSession();
+
         
     }
     @Override
     public List<T> getList() {
         List<T> getList = null;
+        session = sessionFactory.getCurrentSession();
         try{
             session.beginTransaction();
             getList = session.createQuery("from " + currentClass.getSimpleName()).getResultList();
@@ -46,12 +47,28 @@ public class HibernateEntityRepositoryBase<T extends IEntity>  implements IEntit
 
     @Override
     public void add(T entity) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        session = sessionFactory.getCurrentSession();
+        try{
+            session.beginTransaction();
+            session.save(entity);
+            session.getTransaction().commit();
+        }
+        finally{
+            session.close();
+        }
     }
 
     @Override
     public void update(T entity) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+          session = sessionFactory.getCurrentSession();
+        try{
+            session.beginTransaction();
+            session.saveOrUpdate(entity);
+            session.getTransaction().commit();
+        }
+        finally{
+            session.close();
+        }
     }
 
     @Override
