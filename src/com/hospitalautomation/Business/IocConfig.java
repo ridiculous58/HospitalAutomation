@@ -12,12 +12,22 @@ import org.springframework.context.annotation.PropertySource;
 @ComponentScan("com.hospitalAutomation")
 //@PropertySource("classpath:values.properties")
 public class IocConfig {
-    @Bean
+    /*@Bean
     public ICityDal database(){
         return new HibernateCityDal();
     }
     @Bean
     public ICityService service(){
         return new CityManager(database());
+    }*/
+    @Bean
+    public IDoctorDal doctorDal(){
+        return new HibernateDoctorDal();
     }
+    @Bean
+    public IDoctorService doctorService(){
+        return new DoctorManager(doctorDal());
+    }
+    
+    
 }
