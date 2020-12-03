@@ -28,6 +28,13 @@ public class IocConfig {
     public IDoctorService doctorService(){
         return new DoctorManager(doctorDal());
     }
-    
+    @Bean
+    public IPersonalDal personalDal(){
+        return new HibernatePersonalDal();
+    }
+    @Bean
+    public IPersonalService personalService(){
+        return new PersonalManager(personalDal());
+    }
     
 }
