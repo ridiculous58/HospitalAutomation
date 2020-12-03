@@ -41,5 +41,10 @@ public class PersonalManager implements IPersonalService{
         Personal current_personal = personalDal.get(id);
         personalDal.delete(current_personal);
     }
+
+    @Override
+    public Personal getById(int id) {
+        return personalDal.get(id);
+    }
     
 }

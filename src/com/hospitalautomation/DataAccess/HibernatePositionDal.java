@@ -5,15 +5,17 @@
  */
 package com.hospitalautomation.DataAccess;
 
-import com.hospitalautomation.Entities.Doctor;
+import com.hospitalautomation.Entities.Position;
 import com.hospitalautomation.Infrastructure.HibernateEntityRepositoryBase;
 
 /**
  *
  * @author Monster
  */
-public class HibernateDoctorDal extends HibernateEntityRepositoryBase<Doctor> implements IDoctorDal {
-    public HibernateDoctorDal() {
-        super(Doctor.class);
+public class HibernatePositionDal extends HibernateEntityRepositoryBase<Position> implements IPositionDal{
+
+    public HibernatePositionDal() {
+        super(Position.class);
     }
+    
 }

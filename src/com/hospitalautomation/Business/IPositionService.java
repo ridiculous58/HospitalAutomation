@@ -6,17 +6,17 @@
 package com.hospitalautomation.Business;
 
 import com.hospitalautomation.Entities.Personal;
+import com.hospitalautomation.Entities.Position;
 import java.util.List;
 
 /**
  *
  * @author Monster
  */
-public interface IPersonalService {
-   List<Personal> getList(); 
-   Personal getById(int id);
-   void add(Personal position);
-   void update(Personal position);
+public interface IPositionService {
+   List<Position> getList(); 
+   Position getById(int id);
+   void add(Position personal);
+   void update(Position personal);
    void delete(int id);
-   
 }

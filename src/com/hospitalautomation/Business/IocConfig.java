@@ -1,7 +1,7 @@
 
 package com.hospitalautomation.Business;
 
-import com.hospitalautomation.DataAccess.HibernateCityDal;
+
 import com.hospitalautomation.DataAccess.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -35,6 +35,15 @@ public class IocConfig {
     @Bean
     public IPersonalService personalService(){
         return new PersonalManager(personalDal());
+    }
+    
+    @Bean
+    public IPositionDal postionDal(){
+        return new HibernatePositionDal();
+    }
+    @Bean
+    public IPositionService positionService(){
+        return new PositionManager(postionDal());
     }
     
 }
