@@ -12,14 +12,6 @@ import org.springframework.context.annotation.PropertySource;
 @ComponentScan("com.hospitalAutomation")
 //@PropertySource("classpath:values.properties")
 public class IocConfig {
-    /*@Bean
-    public ICityDal database(){
-        return new HibernateCityDal();
-    }
-    @Bean
-    public ICityService service(){
-        return new CityManager(database());
-    }*/
     @Bean
     public IDoctorDal doctorDal(){
         return new HibernateDoctorDal();
@@ -44,6 +36,38 @@ public class IocConfig {
     @Bean
     public IPositionService positionService(){
         return new PositionManager(postionDal());
+    }
+    @Bean
+    public IExpertiseDal expertiseDal(){
+        return new HibernateExpertiseDal();
+    }
+    @Bean
+    public IExpertiseService expertiseService(){
+        return new ExpertiseManager(expertiseDal());
+    }
+    @Bean
+    public IPatientDal patientDal(){
+        return new HibernatePatientDal();
+    }
+    @Bean
+    public IPatientService patientService(){
+        return new PatientManager(patientDal());
+    }
+    @Bean
+    public IPatientAppointmentDal patientAppointmentDal(){
+        return new HibernatePatientAppointmentDal();
+    }
+    @Bean
+    public IPatientAppointmentService patientAppointmentService(){
+        return new PatientAppointmentManager(patientAppointmentDal());
+    }
+    @Bean
+    public IAppointmentDal appointmentDal(){
+        return new HibernateAppointmentDal();
+    }
+    @Bean
+    public IAppointmentService appointmentService(){
+        return new AppointmentManager(appointmentDal());
     }
     
 }
