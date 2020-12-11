@@ -49,7 +49,7 @@ public class PatientLoginPage extends javax.swing.JFrame {
         jPanel1.setLayout(new java.awt.BorderLayout());
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Monster\\Desktop\\Hospital\\src\\images\\corona-virus-1.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/hospitalautomation/UI/Images/corona-virus-1.jpg"))); // NOI18N
         jLabel2.setPreferredSize(new java.awt.Dimension(900, 572));
         jPanel1.add(jLabel2, java.awt.BorderLayout.CENTER);
 

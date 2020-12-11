@@ -215,7 +215,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/icons8_patient_oxygen_mask_25px.png"/>
+                      <Image iconType="3" name="/com/hospitalautomation/UI/Images/icons8_patient_care_25px.png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -287,7 +287,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/icons8_appointment_scheduling_25px.png"/>
+                      <Image iconType="3" name="/com/hospitalautomation/UI/Images/icons8_recurring_appointment_exception_25px.png"/>
                     </Property>
                   </Properties>
                 </Component>

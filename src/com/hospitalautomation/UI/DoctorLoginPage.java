@@ -51,7 +51,7 @@ public class DoctorLoginPage extends javax.swing.JFrame {
         jPanel1.setLayout(new java.awt.BorderLayout());
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Monster\\Desktop\\Hospital\\src\\images\\hospitalImage1.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/hospitalautomation/UI/Images/hospitalImage1.png"))); // NOI18N
         jLabel2.setPreferredSize(new java.awt.Dimension(900, 572));
         jPanel1.add(jLabel2, java.awt.BorderLayout.CENTER);
 
