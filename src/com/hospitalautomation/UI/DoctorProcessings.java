@@ -227,7 +227,7 @@ public class DoctorProcessings extends javax.swing.JFrame {
         });
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_profile_25px.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/hospitalautomation/UI/Images/icons8_profile_25px.png"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(204, 204, 204));
@@ -266,7 +266,7 @@ public class DoctorProcessings extends javax.swing.JFrame {
         });
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_recurring_appointment_exception_25px.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/hospitalautomation/UI/Images/icons8_recurring_appointment_exception_25px.png"))); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(204, 204, 204));
@@ -306,7 +306,7 @@ public class DoctorProcessings extends javax.swing.JFrame {
         });
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_patient_care_25px.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/hospitalautomation/UI/Images/icons8_patient_care_25px.png"))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(204, 204, 204));
@@ -1135,8 +1135,6 @@ public class DoctorProcessings extends javax.swing.JFrame {
     private javax.swing.JButton btnAppointmentAdd;
     private javax.swing.JButton btnAppointmentDelete;
     private javax.swing.JButton btnAppointmentUpdate;
-    private javax.swing.JButton btnDelete;
-    private javax.swing.JButton btnDelete2;
     private javax.swing.JPanel btnDoctor;
     private javax.swing.JPanel btnExit;
     private javax.swing.JButton btnMyProfileUpdate;
@@ -1168,11 +1166,7 @@ public class DoctorProcessings extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
@@ -1201,10 +1195,8 @@ public class DoctorProcessings extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
@@ -1214,8 +1206,6 @@ public class DoctorProcessings extends javax.swing.JFrame {
     private javax.swing.JTextField tbxAppointmentDateTimeUpdate;
     private javax.swing.JTextField tbxAppointmentIdDelete;
     private javax.swing.JTextField tbxAppointmentIdUpdate;
-    private javax.swing.JTextField tbxIdDelete;
-    private javax.swing.JTextField tbxIdDelete2;
     private javax.swing.JTextField tbxMyProfileBirthdateUpdate;
     private javax.swing.JTextField tbxMyProfileIdUpdate;
     private javax.swing.JTextField tbxMyProfileNameUpdate;
