@@ -46,5 +46,19 @@ public class PersonalManager implements IPersonalService{
     public Personal getById(int id) {
         return personalDal.get(id);
     }
+
+    @Override
+    public Personal getByUserName(String userName) {
+        return personalDal.getByUserName(userName);
+    }
+
+    @Override
+    public Personal IsAuthenticated(String userName, String password) {
+        Personal personal = personalDal.IsAuthenticated(userName, password);
+        if (personal != null) {
+            Thread.currentThread().setName(personal.getUserName());
+        }
+        return personal;
+    }
     
 }

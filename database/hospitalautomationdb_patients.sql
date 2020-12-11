@@ -27,8 +27,10 @@ CREATE TABLE `patients` (
   `Name` varchar(50) DEFAULT NULL,
   `Surname` varchar(50) DEFAULT NULL,
   `Birthdate` datetime DEFAULT NULL,
+  `UserName` varchar(100) DEFAULT NULL,
+  `Password` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,6 +39,7 @@ CREATE TABLE `patients` (
 
 LOCK TABLES `patients` WRITE;
 /*!40000 ALTER TABLE `patients` DISABLE KEYS */;
+INSERT INTO `patients` VALUES (1,'Emirhan','Emir','2000-09-03 00:00:00','emir','123'),(3,'Tolga','Şahin','2000-03-27 00:00:00','tolga','123'),(4,'Emirhan','Çifci','2000-09-03 00:00:00','skywalk','skywalk');
 /*!40000 ALTER TABLE `patients` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-02 23:36:39
+-- Dump completed on 2020-12-11 17:11:06

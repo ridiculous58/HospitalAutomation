@@ -18,4 +18,8 @@ public interface IPatientAppointmentService {
    void add(PatientAppointment patientAppointment);
    void update(PatientAppointment patientAppointment);
    void delete(int id);
+
+    public List<PatientAppointment> getByPatientIdList(int patientId);
+
+    public List<PatientAppointment> getByDoctorIdList(int doctorId);
 }

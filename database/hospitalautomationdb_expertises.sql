@@ -26,7 +26,7 @@ CREATE TABLE `expertises` (
   `Id` int NOT NULL AUTO_INCREMENT,
   `Name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +35,7 @@ CREATE TABLE `expertises` (
 
 LOCK TABLES `expertises` WRITE;
 /*!40000 ALTER TABLE `expertises` DISABLE KEYS */;
-INSERT INTO `expertises` VALUES (1,'Dahiliye');
+INSERT INTO `expertises` VALUES (1,'Dahiliye'),(2,'Göz Hastalıkları'),(3,'Cildiye');
 /*!40000 ALTER TABLE `expertises` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-02 23:36:38
+-- Dump completed on 2020-12-11 17:11:06

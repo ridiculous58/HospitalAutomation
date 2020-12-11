@@ -5,13 +5,12 @@
  */
 package com.hospitalautomation.DataAccess;
 
-import com.hospitalautomation.Entities.Appointment;
-import com.hospitalautomation.Infrastructure.IEntityRepository;
+
 
 /**
  *
  * @author Monster
  */
-public interface IAppointmentDal extends IEntityRepository<Appointment>{
+public interface IDoctorLoginService {
     
 }

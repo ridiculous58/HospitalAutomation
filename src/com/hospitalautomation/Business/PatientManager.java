@@ -47,5 +47,19 @@ public class PatientManager implements IPatientService{
         Patient current_patient = patientDal.get(id);
         patientDal.delete(current_patient);
     }
+
+    @Override
+    public Patient IsAuthenticated(String userName, String password) {
+        Patient patient = patientDal.getByUserNameAndPassword(userName,password);
+        if (patient != null) {
+            Thread.currentThread().setName(patient.getUserName());
+        }
+        return patient;
+    }
+
+    @Override
+    public Patient getByUserName(String userName) {
+        return patientDal.getByUserName(userName);
+    }
     
 }

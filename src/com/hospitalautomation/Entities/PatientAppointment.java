@@ -6,6 +6,7 @@
 package com.hospitalautomation.Entities;
 
 import com.hospitalautomation.Infrastructure.IEntity;
+import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -23,22 +24,27 @@ public class PatientAppointment implements IEntity{
     private int id;
     @Column(name = "PatientId")
     private int patientId;
-    @Column(name = "AppointmentId")
-    private int appointmentId;
+    @Column(name = "DoctorId")
+    private int doctorId;
+    @Column(name = "AppointmentDatetime")
+    private LocalDateTime appointmentDateTime;
 
     public PatientAppointment() {
     }
 
-    public PatientAppointment(int id, int patientId, int appointmentId) {
-        this.id = id;
+    public PatientAppointment(int patientId,  int doctorId, LocalDateTime appointmentDatetime) {
         this.patientId = patientId;
-        this.appointmentId = appointmentId;
+        this.doctorId = doctorId;
+        this.appointmentDateTime = appointmentDatetime;
     }
 
-    public PatientAppointment(int patientId, int appointmentId) {
+    public PatientAppointment(int id, int patientId, int doctorId, LocalDateTime appointmentDatetime) {
+        this.id = id;
         this.patientId = patientId;
-        this.appointmentId = appointmentId;
+        this.doctorId = doctorId;
+        this.appointmentDateTime = appointmentDatetime;
     }
+
 
     public int getId() {
         return id;
@@ -56,13 +62,24 @@ public class PatientAppointment implements IEntity{
         this.patientId = patientId;
     }
 
-    public int getAppointmentId() {
-        return appointmentId;
+    public int getDoctorId() {
+        return doctorId;
     }
 
-    public void setAppointmentId(int appointmentId) {
-        this.appointmentId = appointmentId;
+    public void setDoctorId(int doctorId) {
+        this.doctorId = doctorId;
     }
+
+    public LocalDateTime getAppointmentDateTime() {
+        return appointmentDateTime;
+    }
+
+    public void setAppointmentDateTime(LocalDateTime appointmentDateTime) {
+        this.appointmentDateTime = appointmentDateTime;
+    }
+
+
+
     
     
 }

@@ -13,5 +13,9 @@ import com.hospitalautomation.Infrastructure.IEntityRepository;
  * @author Monster
  */
 public interface IPatientDal extends IEntityRepository<Patient>{
+
+    public Patient getByUserNameAndPassword(String userName, String password);
+
+    public Patient getByUserName(String userName);
     
 }

@@ -18,4 +18,6 @@ public interface IPatientService {
    void add(Patient patient);
    void update(Patient patient);
    void delete(int id);
+   Patient IsAuthenticated(String userName, String password);
+   Patient getByUserName(String userName);
 }

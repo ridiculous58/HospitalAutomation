@@ -46,5 +46,15 @@ public class PatientAppointmentManager  implements IPatientAppointmentService{
         PatientAppointment current_patient = patientAppointmentDal.get(id);
         patientAppointmentDal.delete(current_patient);
     }
+
+    @Override
+    public List<PatientAppointment> getByPatientIdList(int patientId) {
+        return patientAppointmentDal.getByPatientIdList(patientId);
+    }
+
+    @Override
+    public List<PatientAppointment> getByDoctorIdList(int doctorId) {
+        return patientAppointmentDal.getByDoctorIdList(doctorId);
+    }
     
 }

@@ -22,24 +22,34 @@ public class Personal implements IEntity{
     private LocalDateTime birthdate;
     @Column(name = "positionId")
     private int positionId;
+    @Column(name = "UserName")
+    private String userName;
+    @Column(name = "Password")
+    private String password;
 
     public Personal() {
     }
 
-    public Personal(String name, String surname, LocalDateTime birthdate, int positionId) {
+    public Personal(String name, String surname, LocalDateTime birthdate, int positionId, String userName, String password) {
         this.name = name;
         this.surname = surname;
         this.birthdate = birthdate;
         this.positionId = positionId;
+        this.userName = userName;
+        this.password = password;
     }
 
-    public Personal(int id, String name, String surname, LocalDateTime birthdate, int positionId) {
+    public Personal(int id, String name, String surname, LocalDateTime birthdate, int positionId, String userName, String password) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.birthdate = birthdate;
         this.positionId = positionId;
+        this.userName = userName;
+        this.password = password;
     }
+
+   
 
     public int getId() {
         return id;
@@ -79,6 +89,22 @@ public class Personal implements IEntity{
 
     public void setPositionId(int positionId) {
         this.positionId = positionId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     
     

@@ -61,13 +61,5 @@ public class IocConfig {
     public IPatientAppointmentService patientAppointmentService(){
         return new PatientAppointmentManager(patientAppointmentDal());
     }
-    @Bean
-    public IAppointmentDal appointmentDal(){
-        return new HibernateAppointmentDal();
-    }
-    @Bean
-    public IAppointmentService appointmentService(){
-        return new AppointmentManager(appointmentDal());
-    }
     
 }

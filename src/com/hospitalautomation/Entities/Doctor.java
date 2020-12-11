@@ -26,24 +26,34 @@ public class Doctor implements IEntity{
     private LocalDateTime birthdate;
     @Column(name = "expertiseId")
     private int expertiseId;
-
+    @Column(name = "UserName")
+    private String userName;
+    @Column(name = "Password")
+    private String password;
+    
     public Doctor() {
     }
 
-    public Doctor(int id, String name, String surname, LocalDateTime birthdate, int expertiseId) {
+    public Doctor(String name, String surname, LocalDateTime birthdate, int expertiseId, String userName, String password) {
+        this.name = name;
+        this.surname = surname;
+        this.birthdate = birthdate;
+        this.expertiseId = expertiseId;
+        this.userName = userName;
+        this.password = password;
+    }
+
+    public Doctor(int id, String name, String surname, LocalDateTime birthdate, int expertiseId, String userName, String password) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.birthdate = birthdate;
         this.expertiseId = expertiseId;
+        this.userName = userName;
+        this.password = password;
     }
 
-    public Doctor(String name, String surname, LocalDateTime birthdate, int expertiseId) {
-        this.name = name;
-        this.surname = surname;
-        this.birthdate = birthdate;
-        this.expertiseId = expertiseId;
-    }
+    
 
     public int getId() {
         return id;
@@ -84,5 +94,22 @@ public class Doctor implements IEntity{
     public void setExpertiseId(int expertiseId) {
         this.expertiseId = expertiseId;
     }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
     
 }

@@ -28,10 +28,12 @@ CREATE TABLE `doctors` (
   `Surname` varchar(50) DEFAULT NULL,
   `Birthdate` datetime DEFAULT NULL,
   `ExpertiseId` int DEFAULT NULL,
+  `UserName` varchar(100) DEFAULT NULL,
+  `Password` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`Id`),
   KEY `ExpertiseId` (`ExpertiseId`),
   CONSTRAINT `doctors_ibfk_1` FOREIGN KEY (`ExpertiseId`) REFERENCES `expertises` (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +42,7 @@ CREATE TABLE `doctors` (
 
 LOCK TABLES `doctors` WRITE;
 /*!40000 ALTER TABLE `doctors` DISABLE KEYS */;
-INSERT INTO `doctors` VALUES (3,'Fatih','Fatih','1999-11-07 00:00:00',1),(4,'Tolga','Şahin','2000-03-27 00:00:00',1);
+INSERT INTO `doctors` VALUES (2,'Fatih','Uluturk','1999-11-07 00:00:00',1,'fatih','1234'),(3,'Emirhan','Fatih','1999-11-07 00:00:00',1,'Çifci','1234');
 /*!40000 ALTER TABLE `doctors` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-02 23:36:38
+-- Dump completed on 2020-12-11 17:11:06

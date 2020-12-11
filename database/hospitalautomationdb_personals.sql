@@ -28,10 +28,12 @@ CREATE TABLE `personals` (
   `Surname` varchar(50) DEFAULT NULL,
   `Birthdate` datetime DEFAULT NULL,
   `PositionId` int DEFAULT NULL,
+  `UserName` varchar(100) DEFAULT NULL,
+  `Password` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`Id`),
   KEY `PositionId` (`PositionId`),
   CONSTRAINT `personals_ibfk_1` FOREIGN KEY (`PositionId`) REFERENCES `positions` (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +42,7 @@ CREATE TABLE `personals` (
 
 LOCK TABLES `personals` WRITE;
 /*!40000 ALTER TABLE `personals` DISABLE KEYS */;
+INSERT INTO `personals` VALUES (2,'Tolga','Şahin','2000-03-27 00:00:00',4,'tolga','1234'),(3,'Emirhan','Fatih','1999-11-07 00:00:00',1,'emir','123'),(4,'Huseyin','Cumali','2000-09-04 23:00:00',4,NULL,NULL);
 /*!40000 ALTER TABLE `personals` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-02 23:36:39
+-- Dump completed on 2020-12-11 17:11:06

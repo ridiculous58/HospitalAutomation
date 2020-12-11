@@ -25,13 +25,14 @@ DROP TABLE IF EXISTS `patientappointments`;
 CREATE TABLE `patientappointments` (
   `Id` int NOT NULL AUTO_INCREMENT,
   `PatientId` int DEFAULT NULL,
-  `AppointmentId` int DEFAULT NULL,
+  `DoctorId` int DEFAULT NULL,
+  `AppointmentDateTime` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`),
   KEY `PatientId` (`PatientId`),
-  KEY `AppointmentId` (`AppointmentId`),
+  KEY `DoctorId` (`DoctorId`),
   CONSTRAINT `patientappointments_ibfk_1` FOREIGN KEY (`PatientId`) REFERENCES `patients` (`Id`),
-  CONSTRAINT `patientappointments_ibfk_2` FOREIGN KEY (`AppointmentId`) REFERENCES `appointments` (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  CONSTRAINT `patientappointments_ibfk_2` FOREIGN KEY (`DoctorId`) REFERENCES `doctors` (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +41,7 @@ CREATE TABLE `patientappointments` (
 
 LOCK TABLES `patientappointments` WRITE;
 /*!40000 ALTER TABLE `patientappointments` DISABLE KEYS */;
+INSERT INTO `patientappointments` VALUES (1,1,3,'2020-10-20 17:09:00'),(2,1,2,'2020-10-20 17:09:00'),(3,1,3,'2020-10-20 17:08:00'),(4,3,2,'2020-09-20 17:20:00'),(5,1,3,'2020-10-20 17:20:00'),(7,3,3,'2020-09-20 17:10:00'),(9,4,3,'2020-12-12 05:30:00');
 /*!40000 ALTER TABLE `patientappointments` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-02 23:36:39
+-- Dump completed on 2020-12-11 17:11:06

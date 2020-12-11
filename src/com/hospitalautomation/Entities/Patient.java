@@ -28,22 +28,33 @@ public class Patient implements IEntity{
     private String surname;
     @Column(name = "birthdate")
     private LocalDateTime birthdate;
+    @Column(name = "UserName")
+    private String userName;
+    @Column(name = "Password")
+    private String password;
+    
 
     public Patient() {
     }
 
-    public Patient(String name, String surname, LocalDateTime birthdate) {
+    public Patient(String name, String surname, LocalDateTime birthdate, String userName, String password) {
         this.name = name;
         this.surname = surname;
         this.birthdate = birthdate;
+        this.userName = userName;
+        this.password = password;
     }
 
-    public Patient(int id, String name, String surname, LocalDateTime birthdate) {
+    public Patient(int id, String name, String surname, LocalDateTime birthdate, String userName, String password) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.birthdate = birthdate;
+        this.userName = userName;
+        this.password = password;
     }
+
+    
 
     public int getId() {
         return id;
@@ -75,6 +86,22 @@ public class Patient implements IEntity{
 
     public void setBirthdate(LocalDateTime birthdate) {
         this.birthdate = birthdate;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     
     

@@ -17,4 +17,6 @@ public interface IDoctorService {
    void add(Doctor doctor);
    void update(Doctor doctor);
    void delete(int id);
+   Doctor IsAuthenticated(String userName,String password);
+   public Doctor getByUserName(String userName);
 }

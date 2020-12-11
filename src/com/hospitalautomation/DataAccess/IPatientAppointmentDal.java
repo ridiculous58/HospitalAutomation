@@ -7,11 +7,17 @@ package com.hospitalautomation.DataAccess;
 
 import com.hospitalautomation.Entities.PatientAppointment;
 import com.hospitalautomation.Infrastructure.IEntityRepository;
+import java.util.List;
 
 /**
  *
  * @author Monster
  */
 public interface IPatientAppointmentDal extends IEntityRepository<PatientAppointment>{
+
+    public List<PatientAppointment> getByPatientIdList(int patientId);
+
+    public List<PatientAppointment> getByDoctorIdList(int doctorId);
+
     
 }

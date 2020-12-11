@@ -17,6 +17,7 @@ public class DoctorManager implements IDoctorService{
     private IDoctorDal doctorDal;
     public DoctorManager(IDoctorDal doctorDal) {
         this.doctorDal = doctorDal;
+
     }
 
     @Override
@@ -38,5 +39,19 @@ public class DoctorManager implements IDoctorService{
     public void delete(int id) {
         Doctor current_doctor = doctorDal.get(id);
         doctorDal.delete(current_doctor);
+    }
+
+    @Override
+    public Doctor IsAuthenticated(String userName, String password) {
+        Doctor doctor = doctorDal.IsAuthenticated(userName, password);
+        if (doctor != null) {
+            Thread.currentThread().setName(doctor.getUserName());
+        }
+        return doctor;
+    }
+
+    @Override
+    public Doctor getByUserName(String userName) {
+        return doctorDal.getByUserName(userName);
     }
 }

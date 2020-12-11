@@ -13,5 +13,8 @@ import com.hospitalautomation.Infrastructure.IEntityRepository;
  * @author Monster
  */
 public interface IPersonalDal extends IEntityRepository<Personal> {
+
+    public Personal IsAuthenticated(String userName,String password);
+    public Personal getByUserName(String userName);
     
 }

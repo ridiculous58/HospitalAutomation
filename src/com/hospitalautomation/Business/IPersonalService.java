@@ -18,5 +18,9 @@ public interface IPersonalService {
    void add(Personal position);
    void update(Personal position);
    void delete(int id);
+
+   public Personal getByUserName(String userName);
+
+   public Personal IsAuthenticated(String userName, String password);
    
 }
