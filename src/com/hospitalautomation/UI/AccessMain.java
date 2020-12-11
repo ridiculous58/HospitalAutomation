@@ -39,25 +39,37 @@ public class AccessMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnPersonalLogin = new javax.swing.JButton();
-        btnDoctorLogin1 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         btnPatientLogin = new javax.swing.JButton();
+        btnDoctorLogin1 = new javax.swing.JButton();
+        btnPersonalLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1200, 643));
 
-        btnPersonalLogin.setText("Personal Login");
-        btnPersonalLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPersonalLoginActionPerformed(evt);
-            }
-        });
+        jPanel1.setPreferredSize(new java.awt.Dimension(650, 500));
+        jPanel1.setLayout(new java.awt.BorderLayout());
 
-        btnDoctorLogin1.setText("Doctor Login");
-        btnDoctorLogin1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDoctorLogin1ActionPerformed(evt);
-            }
-        });
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Monster\\Desktop\\Hospital\\src\\images\\AccessPage.jpg")); // NOI18N
+        jPanel1.add(jLabel1, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_START);
+
+        jPanel2.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel2.setForeground(new java.awt.Color(153, 153, 153));
+        jPanel2.setMinimumSize(new java.awt.Dimension(300, 432));
+        jPanel2.setPreferredSize(new java.awt.Dimension(506, 600));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(153, 0, 51));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("DUZCE UNIVERSITY HOSPITAL");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 80, 560, 80));
 
         btnPatientLogin.setText("Patient Login");
         btnPatientLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -65,30 +77,25 @@ public class AccessMain extends javax.swing.JFrame {
                 btnPatientLoginActionPerformed(evt);
             }
         });
+        jPanel2.add(btnPatientLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 198, 42));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(168, 168, 168)
-                .addComponent(btnDoctorLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(btnPatientLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(btnPersonalLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(181, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(188, 188, 188)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnDoctorLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPatientLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPersonalLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(267, Short.MAX_VALUE))
-        );
+        btnDoctorLogin1.setText("Doctor Login");
+        btnDoctorLogin1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDoctorLogin1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnDoctorLogin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 198, 42));
+
+        btnPersonalLogin.setText("Personal Login");
+        btnPersonalLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPersonalLoginActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnPersonalLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 198, 42));
+
+        getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -165,5 +172,9 @@ public class AccessMain extends javax.swing.JFrame {
     private javax.swing.JButton btnDoctorLogin1;
     private javax.swing.JButton btnPatientLogin;
     private javax.swing.JButton btnPersonalLogin;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
